@@ -12,4 +12,4 @@
 {% else %}
     {{ super() }}
 {% endif %}
-{% endblock %}
+{% endblock any_cell %}
