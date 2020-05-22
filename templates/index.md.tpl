@@ -7,4 +7,4 @@ Add the description of the class here.
 {{ line }}
 {% endfor %}
 
-[//]: # Feel free to add more things here.
+

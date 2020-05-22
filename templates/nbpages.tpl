@@ -12,4 +12,4 @@
 {% else %}
     {{ super() }}
 {% endif %}
-{% endblock any
+{% endblock %}
