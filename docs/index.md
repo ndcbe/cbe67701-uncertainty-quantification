@@ -3,12 +3,12 @@
 
 Add the description of the class here.
 
-### [Table of Contents](ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
+### [Table of Contents](https://ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
 
-### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
+### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
 
-### [Chapter 2.0 Probability-and-Statistics-Preliminaries](ndcbe.github.io/cbe67701-uncertainty-quantification/02.00-Probability-and-Statistics-Preliminaries.html)
+### [Chapter 2.0 Probability-and-Statistics-Preliminaries](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.00-Probability-and-Statistics-Preliminaries.html)
 
-### [Chapter 3.0 Input Parameter Distributions](ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
+### [Chapter 3.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
 
 
