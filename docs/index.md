@@ -11,4 +11,22 @@ Add the description of the class here.
 
 ### [Chapter 3.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
 
+### [Chapter 4.0 Local Sensitivity Analysis Based on Derivative Approximations](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.00-Local-Sensitivity-Analysis-Based-on-Derivative-Approximations.html)
+
+### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
+
+### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
+
+### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
+
+### [Chapter 8.0 Reliability Methods for Estimating the Probability of Failure](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.00-Reliability-Methods-for-Estimating-the-Probability-of-Failure.html)
+
+### [Chapter 9.0 Stochastic Projection and Collocation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.00-Stochastic-Projection-and-Collocation.html)
+
+### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
+
+### [Chapter 11.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
+
+### [Chapter 12.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
+
 
