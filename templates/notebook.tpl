@@ -1,5 +1,5 @@
 
-<!-- jinja2 template that extendes `full` to add cell tags in the html rendering of notebooks -->
+<!-- jinja2 template extends `full` to include cell tags in the html rendering of notebooks -->
 {% extends 'full.tpl'%}
 {% block any_cell %}
 {% if cell['metadata'].get('tags', []) %}
@@ -13,3 +13,4 @@
     {{ super() }}
 {% endif %}
 {% endblock any_cell %}
+
