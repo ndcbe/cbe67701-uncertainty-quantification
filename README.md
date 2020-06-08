@@ -20,6 +20,9 @@ Each student will be assigned (see class Google Doc) one chapter to prepare a mi
 Need inspiration? Ask yourself:
 - Is there an exisiting example or figure in the textbook I would like to learn how to reproduce?
 - Can I construct a (very simple) application related to my research to try a method in the chapter? (Caution: This might take longer than you think.)
+- Can I find a popular Python package that implements one of the methods from the chapter? If so, does it have an example I could turn into a brief mini-tutorial for my classmates?
+
+Tip: Email Prof. Kantor (jeff@nd.edu) if you need help installing a custom package on Google Colab.
 
 Once you have sent the scope of the example, outline the main steps of the analysis on paper. Some people refer to this as writing pseudocode.
 
