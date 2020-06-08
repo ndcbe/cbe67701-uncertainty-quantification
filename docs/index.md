@@ -13,27 +13,50 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Table of Contents](https://ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
 
 ### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
+- [1.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.01-Contributed-Example.html)
 
 ### [Chapter 2.0 Probability-and-Statistics-Preliminaries](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.00-Probability-and-Statistics-Preliminaries.html)
+- [2.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.01-Contributed-Example.html)
+- [2.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.02-Contributed-Example.html)
 
 ### [Chapter 3.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
+- [3.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.01-Contributed-Example.html)
+- [3.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.02-Contributed-Example.html)
 
 ### [Chapter 4.0 Local Sensitivity Analysis Based on Derivative Approximations](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.00-Local-Sensitivity-Analysis-Based-on-Derivative-Approximations.html)
+- [4.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html)
+- [4.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Contributed-Example.html)
 
 ### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
+- [5.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
+- [5.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.02-Contributed-Example.html)
 
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
+- [6.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
+- [6.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
+- [7.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Contributed-Example.html)
+- [7.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.02-Contributed-Example.html)
 
 ### [Chapter 8.0 Reliability Methods for Estimating the Probability of Failure](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.00-Reliability-Methods-for-Estimating-the-Probability-of-Failure.html)
+- [8.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.01-Contributed-Example.html)
+- [8.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.02-Contributed-Example.html)
 
 ### [Chapter 9.0 Stochastic Projection and Collocation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.00-Stochastic-Projection-and-Collocation.html)
+- [9.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.01-Contributed-Example.html)
+- [9.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.02-Contributed-Example.html)
 
 ### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
+- [10.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.01-Contributed-Example.html)
+- [10.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Contributed-Example.html)
 
 ### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
+- [11.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Contributed-Example.html)
+- [11.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.02-Contributed-Example.html)
 
 ### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
+- [12.1 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Epistemic-Uncertainties.html)
+- [12.2 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.02-Epistemic-Uncertainties.html)
 
 
