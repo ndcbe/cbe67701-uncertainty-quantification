@@ -25,8 +25,8 @@ Add the description of the class here.
 
 ### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
 
-### [Chapter 11.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
+### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
 
-### [Chapter 12.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
+### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
 
 
