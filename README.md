@@ -32,8 +32,8 @@ After locating `XX.0Y-An-Example.ipynb`, download it to your local computer.
 ### Step 3: Upload Your File To Colab
 
 We recommend creating your example in Google Colab. This is a free, cloud-based Python environment. That means you do not need to install any special software on your computer. Here are the steps:
-1. Navigate to colab.google.com
-2. Choose File --> Upload Notebook in the menu
+1. Navigate to https://colab.research.google.com/
+2. Choose **File --> Upload Notebook** in the menu
 3. Upload the notebook you obtained from the previous step
 4. Save a copy in Google Drive
 
@@ -65,22 +65,24 @@ Select your new branch from the dropdown menu. Then navigate to the `/notebooks`
 
 ![](/notebooks/figures/upload-files.png)
 
+Note: Advanced users are welcome to modify Steps 3, 4, 5, and 6 to instead edit on their local machine. We recommend using [anaconda](https://www.anaconda.com/) and your favorite git desktop client (or the command line interface). 
+
 ### Step 7: Create a Pull Request
 
 Once your example is ready, create a pull request to merge into the master branch. After uploading the new notebook file to your branch, you should see an orange/yellow box with your branch name.
 
 ![](/notebooks/figures/pull-request1.png)
 
-Choose "Compare & pull request".
+Choose **Compare & pull request**.
 
-This should take you to a screen with the title "Open a pull request":
+This should take you to a screen with the title **Open a pull request**:
 
 ![](/notebooks/figures/pull-request2.png)
 
-Make sure you see master <-- your branch name. Then add a descriptive comment (what did you change) and click "Create pull request".
+Make sure you see **master <-- your branch name**. Then add a descriptive comment (what did you change) and click **Create pull request**.
 
-Email Prof. Dowling after you create your pull request. You must do this by 11am EDT the day of your presentation at the latest.
+Email Prof. Dowling after you create your pull request. You **must do this by 11am EDT the day of your presentation** at the latest.
 
 ### Step 8: Run nbpages to Publish to the Class Website
 
-Prof. Dowling will publish your notebook to the class website. Why the hard time deadline (11am)? There is a significant delay in updating the cache on GitHub pages.
+Prof. Dowling will publish your notebook to the class website. Why the time deadline (11am)? There is a significant delay in updating the cache on GitHub pages.
