@@ -67,8 +67,20 @@ Select your new branch from the dropdown menu. Then navigate to the `/notebooks`
 
 ### Step 7: Create a Pull Request
 
-Once your example is ready, create a pull request to merge into the master branch. Email Prof. Dowling if you need help.
+Once your example is ready, create a pull request to merge into the master branch. After uploading the new notebook file to your branch, you should see an orange/yellow box with your branch name.
+
+![](/notebooks/figures/pull-request1.png)
+
+Choose "Compare & pull request".
+
+This should take you to a screen with the title "Open a pull request":
+
+![](/notebooks/figures/pull-request2.png)
+
+Make sure you see master <-- your branch name. Then add a descriptive comment (what did you change) and click "Create pull request".
+
+Email Prof. Dowling after you create your pull request. You must do this by 11am EDT the day of your presentation at the latest.
 
 ### Step 8: Run nbpages to Publish to the Class Website
 
-Please email Prof. Dowling by 11am EDT the day of your presentation, if not earlier. He will publish your notebook to the class website. Why the hard time deadline? There is a significant delay in updating the cache on GitHub pages.
+Prof. Dowling will publish your notebook to the class website. Why the hard time deadline (11am)? There is a significant delay in updating the cache on GitHub pages.
