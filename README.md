@@ -25,13 +25,19 @@ Once you have sent the scope of the example, outline the main steps of the analy
 
 ### Step 2: Find the Corresponding Example File
 
-The schedule will indicate in you are assigned example **01** or **02** for each chapter. Find the corresponding file `/notebooks/XX.0Y-An-Example.ipynb` in the class GitHub repository where ``XX`` is the chapter number and `0Y` is either `01` or `02`. This is the file you should edit. Do not edit the corresponding files in the `/docs` folder. The files in the  `/docs` folder will be automatically generated with proper formating.
+The schedule will indicate in you are assigned example **01** or **02** for each chapter. Find the corresponding file `/notebooks/XX.0Y-An-Example.ipynb` in the class GitHub repository where ``XX`` is the chapter number and `0Y` is either `01` or `02`. This is the file you should edit. **Do not edit** the corresponding files in the `/docs` folder. The files in the  `/docs` folder will be automatically generated with proper formating. This is important.
 
-### Step 3: Create a Branch in GitHub
+After locating `XX.0Y-An-Example.ipynb`, download it to your local computer.
 
-By creating a branch, you'll be able to work independently of your classmates. Tip: Give the branch a meaningful name such as your username or the chapter and example number.
+### Step 3: Upload Your File To Colab
 
-### Step 3: Create and Test Your Example
+We recommend creating your example in Google Colab. This is a free, cloud-based Python environment. That means you do not need to install any special software on your computer. Here are the steps:
+1. Navigate to colab.google.com
+2. Choose File --> Upload Notebook in the menu
+3. Upload the notebook you obtained from the previous step
+4. Save a copy in Google Drive
+
+### Step 4: Create and Test Your Example
 
 Now for the fun part: create and test your example. (See recommendations below in software setup.)
 
@@ -41,12 +47,28 @@ Styleguide:
 - Place all figures in `/notebook/figures/` and all data in `/notebooks/data/`.
 - Do not include section or subsection numbers. Those will automatically be added.
 
-As you work, periodically push updated to your branch.
+Graduate students Xian Gao, Elvis Eugene, Bridgette Befort, and Kanishka Ghosh all have experience using Google Colab.
 
-### Step 4: Create a Pull Request
+Tip: While Colab does support limited integration with GitHub, the current interface is clunkly. You are welcome to try it for yourself, but you have been warned...
+
+### Step 5: Create a Branch in GitHub
+
+On GitHub, find the drop down box containing "Branch:".
+
+![](/notebooks/figures/create-branch.png)
+
+To create a branch, type a meaningful name such as your username or the chapter and example number into the field.
+
+### Step 6: Upload your .ipynb File
+
+Select your new branch from the dropdown menu. Then navigate to the `/notebooks` folder and choose the **Upload files button**.
+
+![](/notebooks/figures/upload-files.png)
+
+### Step 7: Create a Pull Request
 
 Once your example is ready, create a pull request to merge into the master branch. Email Prof. Dowling if you need help.
 
-### Step 5: Run nbpages to Publish to the Class Website
+### Step 8: Run nbpages to Publish to the Class Website
 
 Please email Prof. Dowling by 11am EDT the day of your presentation, if not earlier. He will publish your notebook to the class website. Why the hard time deadline? There is a significant delay in updating the cache on GitHub pages.
