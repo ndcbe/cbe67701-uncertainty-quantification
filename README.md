@@ -24,6 +24,8 @@ Need inspiration? Ask yourself:
 
 Tip: Email Prof. Kantor (jeff@nd.edu) if you need help installing a custom package on Google Colab.
 
+Tip: Some examples from Prof. McClarren are available [here](https://github.com/ndcbe/cbe67701-uncertainty-quantification/blob/master/UQ_Notebooks.zip).
+
 Once you have sent the scope of the example, outline the main steps of the analysis on paper. Some people refer to this as writing pseudocode.
 
 ### Step 2: Find the Corresponding Example File
