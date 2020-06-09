@@ -32,9 +32,9 @@ Once you have set the scope of the example, outline the main steps of the analys
 
 ### Step 2: Find the Corresponding Example File
 
-The schedule will indicate in you are assigned example **01** or **02** for each chapter. Find the corresponding file `/notebooks/XX.0Y-An-Example.ipynb` in the class GitHub repository where ``XX`` is the chapter number and `0Y` is either `01` or `02`. This is the file you should edit. **Do not edit** the corresponding files in the `/docs` folder. The files in the  `/docs` folder will be automatically generated with proper formating. This is important.
+The schedule will indicate in you are assigned example **1**, **2**, or **3** for each chapter. Find the corresponding file `/notebooks/XX.0Y-Contributed-Example.ipynb` in the class GitHub repository where ``XX`` is the chapter number and `0Y` is `01`, `02`, or `03`. This is the file you should edit. **Do not edit** the corresponding files in the `/docs` folder. The files in the  `/docs` folder will be automatically generated with proper formating. This is important.
 
-After locating `XX.0Y-An-Example.ipynb`, download it to your local computer.
+After locating `XX.0Y-Contributed-Example.ipynb`, download it to your local computer.
 
 ### Step 3: Upload Your File To Colab
 
