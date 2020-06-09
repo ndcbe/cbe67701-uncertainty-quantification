@@ -44,6 +44,8 @@ We recommend creating your example in Google Colab. This is a free, cloud-based 
 3. Upload the notebook you obtained from the previous step
 4. Save a copy in Google Drive
 
+Tip: While Colab does support limited integration with GitHub, the current interface is clunkly. You are welcome to try it for yourself, but you have been warned...
+
 ### Step 4: Create and Test Your Example
 
 Now for the fun part: create and test your example. (See recommendations below in software setup.)
@@ -54,9 +56,7 @@ Styleguide:
 - Place all figures in `/notebook/figures/` and all data in `/notebooks/data/`.
 - Do not include section or subsection numbers. Those will automatically be added.
 
-Graduate students Xian Gao, Elvis Eugene, Bridgette Befort, and Kanishka Ghosh all have experience using Google Colab.
-
-Tip: While Colab does support limited integration with GitHub, the current interface is clunkly. You are welcome to try it for yourself, but you have been warned...
+Graduate students Xian Gao, Elvis Eugene, Bridgette Befort, and Kanishka Ghosh all have experience using Google Colab. Prof. Kantor (jeff@nd.edu) is also a great resource.
 
 ### Step 5: Create a Branch in GitHub
 
