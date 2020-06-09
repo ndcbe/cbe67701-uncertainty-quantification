@@ -15,6 +15,8 @@ Everyone is expected to (attempt) to read each chapter and contribute at least o
 
 Each student will be assigned (see class Google Doc) one chapter to prepare a minimum working example to demonstrate an important method or application. Please keep these examples simple; not only does too complex of an example take a long time to prepare and debug, but the extra details may distract from the main message.
 
+You should aim to spend 5 to 10 minutes presenting your example and about 5 minutes answering questions.
+
 ### Step 1: Set Example Scope
 
 Need inspiration? Ask yourself:
