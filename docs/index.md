@@ -11,9 +11,10 @@ method from each chapter.
 For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Computational Science*](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph005207583) by Prof. Ryan McClarren.
 
 ### [Table of Contents](https://ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
+### [Figure Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/figure_index.html)
 
 ### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
-- [1.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.01-Contributed-Example.html)
+- [1.1 Our First Example](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.01-Contributed-Example.html)
 
 ### [Chapter 2.0 Probability-and-Statistics-Preliminaries](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.00-Probability-and-Statistics-Preliminaries.html)
 - [2.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.01-Contributed-Example.html)
@@ -56,7 +57,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [11.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.02-Contributed-Example.html)
 
 ### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
-- [12.1 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Epistemic-Uncertainties.html)
-- [12.2 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.02-Epistemic-Uncertainties.html)
+- [12.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Contributed-Example.html)
+- [12.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.02-Contributed-Example.html)
 
 
