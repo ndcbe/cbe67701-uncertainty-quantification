@@ -1,6 +1,6 @@
 # Welcome to CBE 67701!
 
-Please check the Sakai website for useful links including the Zoom meeting information.
+Please check the Sakai website for useful links including the Zoom meeting information, chapter assignments, and questions for class discussion.
 
 ## Goals and Expectations
 
