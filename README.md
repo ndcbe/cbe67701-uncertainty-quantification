@@ -1,6 +1,6 @@
 # Welcome to CBE 67701!
 
-Please check the Sakai website for useful links including the Zoom meeting information, chapter assignments, and questions for class discussion.
+Please see the [Sakai website](https://sakailogin.nd.edu/portal/site/SU20-CBE-67701-01) for useful links including the Zoom meeting information, chapter assignments, and questions for class discussion.
 
 ## Goals and Expectations
 
