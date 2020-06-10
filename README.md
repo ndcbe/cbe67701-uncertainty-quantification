@@ -48,7 +48,7 @@ Tip: While Colab does support limited integration with GitHub, the current inter
 
 ### Step 4: Create and Test Your Example
 
-Now for the fun part: create and test your example. (See recommendations below in software setup.)
+Now for the fun part: create and test your example.
 
 Styleguide:
 - Try to break your example into a few sections. Remember section headers start with `##` in markdown cells.
