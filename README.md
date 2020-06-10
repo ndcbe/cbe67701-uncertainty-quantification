@@ -26,7 +26,7 @@ Need inspiration? Ask yourself:
 
 Tip: Email Prof. Kantor (jeff@nd.edu) if you need help installing a custom package on Google Colab.
 
-Tip: Some examples from Prof. McClarren are available [here](https://github.com/ndcbe/cbe67701-uncertainty-quantification/blob/master/UQ_Notebooks.zip).
+Tip: Some examples from Prof. McClarren are available [here](https://github.com/ndcbe/cbe67701-uncertainty-quantification/blob/master/UQ_Notebooks.zip). Examples (electronic supplemental materials) for Chapters 2, 3, 4, 6, 7, 9, 10, and 11 are also available on Sakai or through the publisher's website.
 
 Once you have set the scope of the example, outline the main steps of the analysis on paper. Some people refer to this as writing pseudocode. It is really important, especially when you are learning something new.
 
