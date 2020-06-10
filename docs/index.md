@@ -32,6 +32,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
 - [5.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
 - [5.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.02-Contributed-Example.html)
+- [5.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.03-Contributed-Example.html)
 
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
 - [6.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
