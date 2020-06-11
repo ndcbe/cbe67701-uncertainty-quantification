@@ -13603,8 +13603,8 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 3
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 2
-Total CPU secs in IPOPT (w/o function evaluations)   =      1.380
-Total CPU secs in NLP function evaluations           =      0.010
+Total CPU secs in IPOPT (w/o function evaluations)   =      1.393
+Total CPU secs in NLP function evaluations           =      0.009
 
 EXIT: Optimal Solution Found.
 # ==========================================================
@@ -13629,7 +13629,7 @@ Solver:
   Termination condition: optimal
   Id: 0
   Error rc: 0
-  Time: 0.4100329875946045
+  Time: 0.45342111587524414
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -13780,7 +13780,18 @@ Solution:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's import the data with Pandas:</p>
+<h3 id="1.1.5.1-Download-the-data-into-Colab">1.1.5.1 Download the data into Colab<a class="anchor-link" href="#1.1.5.1-Download-the-data-into-Colab">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following code checks if the data file can be found. If not, it downloads the file from GitHub. We are working on streamlining this process. For simplicity, we recommend directly defining data in Python as lists or arrays for contributed examples, which bypasses the need for this step.</p>
 
 </div>
 </div>
@@ -13792,6 +13803,95 @@ Solution:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">urllib</span>
+
+<span class="c1"># GitHub pages url</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://ndcbe.github.io/cbe67701-uncertainty-quantification/&quot;</span>
+
+<span class="c1"># relative file paths to download</span>
+<span class="c1"># this is the only line of code you need to change</span>
+<span class="n">file_paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/Stock_Data.csv&#39;</span><span class="p">]</span>
+
+<span class="c1"># loop over all files to download</span>
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">file_paths</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checking for&quot;</span><span class="p">,</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="c1"># split each file_path into a folder and filename</span>
+    <span class="n">stem</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    
+    <span class="c1"># check if the folder name is not empty</span>
+    <span class="k">if</span> <span class="n">stem</span><span class="p">:</span>
+        <span class="c1"># check if the folder exists</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">stem</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Creating folder&quot;</span><span class="p">,</span><span class="n">stem</span><span class="p">)</span>
+            <span class="c1"># if the folder does not exist, create it</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span>
+    <span class="c1"># if the file does not exist, create it by downloading from GitHub pages</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="n">url</span><span class="p">,</span>
+                <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">pathname2url</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Downloading&quot;</span><span class="p">,</span><span class="n">file_url</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">File found!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Checking for data/Stock_Data.csv
+	File found!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.2-Import-and-analyze-with-Pandas">1.1.5.2 Import and analyze with Pandas<a class="anchor-link" href="#1.1.5.2-Import-and-analyze-with-Pandas">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's import the data with Pandas:</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/Stock_Data.csv&#39;</span><span class="p">)</span>
@@ -13820,7 +13920,7 @@ Solution:
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13836,7 +13936,7 @@ Solution:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13936,7 +14036,7 @@ Solution:
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -13952,7 +14052,7 @@ Solution:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14065,6 +14165,17 @@ Solution:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.3-Visualize">1.1.5.3 Visualize<a class="anchor-link" href="#1.1.5.3-Visualize">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Finally, let's plot the daily closing price for the Dow Jones Industry Average.</p>
 
 </div>
@@ -14076,7 +14187,7 @@ Solution:
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_data</span><span class="p">[</span><span class="s2">&quot;DJI&quot;</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
