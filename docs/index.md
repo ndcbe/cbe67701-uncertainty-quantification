@@ -21,7 +21,6 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Chapter 2.0 Probability-and-Statistics-Preliminaries](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.00-Probability-and-Statistics-Preliminaries.html)
 - [2.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.01-Contributed-Example.html)
 - [2.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.02-Contributed-Example.html)
-- [2.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.03-Contributed-Example.html)
 
 ### [Chapter 3.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
 - [3.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.01-Contributed-Example.html)
@@ -39,10 +38,12 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
 - [6.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
 - [6.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
+- [6.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Contributed-Example.html)
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
 - [7.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Contributed-Example.html)
 - [7.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.02-Contributed-Example.html)
+- [7.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.03-Contributed-Example.html)
 
 ### [Chapter 8.0 Reliability Methods for Estimating the Probability of Failure](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.00-Reliability-Methods-for-Estimating-the-Probability-of-Failure.html)
 - [8.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.01-Contributed-Example.html)
