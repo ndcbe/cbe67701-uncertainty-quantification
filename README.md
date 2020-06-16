@@ -36,6 +36,16 @@ The schedule will indicate in you are assigned example **1**, **2**, or **3** fo
 
 After locating `XX.0Y-Contributed-Example.ipynb`, download it to your local computer.
 
+To download the file, click the **Raw** button:
+
+![](/notebooks/figures/download-1.png)
+
+This should load the notebook as a text file in your webbrowser:
+
+![](/notebooks/figures/download-2.png)
+
+Copy and paste the contents into your favorite text editor and save as ``XX.0Y-Contributed-Example.ipynb``.
+
 ### Step 3: Upload Your File To Colab
 
 We recommend creating your example in Google Colab. This is a free, cloud-based Python environment. That means you do not need to install any special software on your computer. Here are the steps:
