@@ -13231,6 +13231,12 @@ $$A = \pi r^2$$<p>In a markdown cell, starting a line with...</p>
 <p><em>###</em> creates a subsection title.</p>
 <p><em>####</em> createa a subsubsection title.</p>
 <p>The package <a href="https://github.com/jckantor/nbpages">nbpages</a> will automatically add numbers to sections, subsections, etc. when publishing to the HTML website. Please do not start titles with a number. Prof. Dowling will run <code>nbpages</code>.</p>
+<p>For example, <code>nbpages</code> will automatially added the following section numbers:</p>
+<p><em>#</em> 1.1</p>
+<p><em>##</em> 1.1.1</p>
+<p><em>###</em> 1.1.1.1</p>
+<p><em>####</em> 1.1.1.1.1</p>
+<p>The extra <code>1.</code> is because this notebook is for chapter 1, subchapter 1.1.</p>
 <p>Recommended tutorial: <a href="https://www.datacamp.com/community/tutorials/markdown-in-jupyter-notebook">Markdown in Jupyter Notebook</a></p>
 <p>Please avoid adding HTML code to your markdown cells. HTML code can cause formatting issues with <code>nbpages</code>.</p>
 
@@ -13279,6 +13285,7 @@ $$A = \pi r^2$$<p>In a markdown cell, starting a line with...</p>
 
 <span class="c1"># Check if Pyomo is available. If not, install it.</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">&quot;pyomo&quot;</span><span class="p">):</span>
+    <span class="c1"># Tip: &quot;!pip&quot; means run the &#39;pip&#39; command outside the notebook.ß</span>
     <span class="o">!</span>pip install -q pyomo
     <span class="k">assert</span><span class="p">(</span><span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">&quot;pyomo&quot;</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
