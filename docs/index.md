@@ -23,7 +23,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [2.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/02.02-Contributed-Example.html)
 
 ### [Chapter 3.0 Input Parameter Distributions](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.00-Input-Parameter-Distributions.html)
-- [3.1 3.1 Copulas](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.01-Contributed_Example.html)
+- [3.1 Copulas](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.01-Contributed-Example.html)
 - [3.2 Principal](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.02-Contributed-Example.html)
 
 ### [Chapter 4.0 Local Sensitivity Analysis Based on Derivative Approximations](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.00-Local-Sensitivity-Analysis-Based-on-Derivative-Approximations.html)
