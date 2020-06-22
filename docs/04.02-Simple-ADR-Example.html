@@ -13135,7 +13135,7 @@ content is available <a href="git@github.com:ndcbe/cbe67701-uncertainty-quantifi
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html">4.1 Meaningful Title Goes Here</a> | <a href="toc.html">Contents</a> | <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html">5.0 Regression Approximations to Estimate Sensitivities</a><p><a href="https://colab.research.google.com/github/ndcbe/cbe67701-uncertainty-quantification/blob/master/docs/04.02-Contributed-Example.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Contributed-Example.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
+&lt; <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html">4.1 Meaningful Title Goes Here</a> | <a href="toc.html">Contents</a> | <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html">5.0 Regression Approximations to Estimate Sensitivities</a><p><a href="https://colab.research.google.com/github/ndcbe/cbe67701-uncertainty-quantification/blob/master/docs/04.02-Simple-ADR-Example.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Simple-ADR-Example.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
 
 </div>
 </div>
@@ -13147,7 +13147,9 @@ content is available <a href="git@github.com:ndcbe/cbe67701-uncertainty-quantifi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.2-Meaningful-Title-Goes-Here">4.2 Meaningful Title Goes Here<a class="anchor-link" href="#4.2-Meaningful-Title-Goes-Here">&#182;</a></h1>
+<h1 id="4.2-Advection-Diffusion-Reaction-(ADR)-Example">4.2 Advection-Diffusion-Reaction (ADR) Example<a class="anchor-link" href="#4.2-Advection-Diffusion-Reaction-(ADR)-Example">&#182;</a></h1><p>Noah Wamble (nwamble@nd.edu) 
+June 22nd, 2020</p>
+
 </div>
 </div>
 </div>
@@ -13158,7 +13160,98 @@ content is available <a href="git@github.com:ndcbe/cbe67701-uncertainty-quantifi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Created by YOUR NAME HERE (netid@nd.edu)</p>
+<p>This example was adapted from code from:</p>
+<p>McClarren, Ryan G (2018). <em>Uncertainty Quantification and Predictive Computational Science: A Foundation for Physical Scientists and Engineers</em>, <em>Chapter 4: Local Sensitivity Analysis Based on Derivative Approximations</em>, Springer, <a href="https://doi.org/10.1007/978-3-319-99525-0_4">https://doi.org/10.1007/978-3-319-99525-0_4</a></p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.2.1-What-do-we-want-to-know?">4.2.1 <strong>What do we want to know?</strong><a class="anchor-link" href="#4.2.1-What-do-we-want-to-know?">&#182;</a></h3><ul>
+<li>How would the QoIs vary for small, expected perturbations in the inputs if given knowledge of the QoI at a particular value? To accomplish this, we are interested in the derivative of the QoI at a nominal input value (95).</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.2.2-Why-do-we-want-to-know-that?">4.2.2 <strong>Why do we want to know that?</strong><a class="anchor-link" href="#4.2.2-Why-do-we-want-to-know-that?">&#182;</a></h3><ul>
+<li><p>This information will allow us <strong>to see which parameters have a larger effect</strong> on the QoI.</p>
+</li>
+<li><p>Knowing the sensitivities allows the researcher <strong>to narrow the focus</strong> to a smaller number of parameters and then apply more rigorous techniques to only these parameters.</p>
+</li>
+<li><p>If the variabilities in these distributions are small, it may be possible to <strong>quantify the uncertainty</strong> in the QoI to these parameters using only local information (95).</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.2.3-4.3.1-Simple-ADR-Example">4.2.3 <strong>4.3.1 Simple ADR Example</strong><a class="anchor-link" href="#4.2.3-4.3.1-Simple-ADR-Example">&#182;</a></h3><p>We will study the steady advection-diffusion-reaction equation  in one-spatial dimension with a spatially constant, but uncertain, diffusion coefficient, a linear reaction term, and a prescribed uncertain source.</p>
+$$
+\nu \frac{du}{dx} - \omega \frac{d^2u}{dx^2} + \kappa(x)u = S(x)
+$$<p>With initial condition: 
+$$
+ u(0)=u(10)=0
+$$
+Where:
+$$
+\kappa(x) =     \begin{cases}
+      \kappa_l &amp; x \: \epsilon \: (5,7.5)\\
+      \kappa_h &amp; \text{otherwise}\\
+    \end{cases} 
+$$
+$$
+$$
+$$ 
+S(x)= qx(10-x)
+$$</p>
+<p>With $\mu_v =10$, $\mu_\omega= 20$, Var$(\mu_v)=0.0723493$, Var$(\omega)= 0.3195214$</p>
+<p>$\mu_{\kappa_h} = 2$, Var$( \kappa_h ) = 0.002778142$ , and $\mu_{k_l} = 0.1$, Var$( \kappa_l )= 8.511570 \times 10^{-6}$, $\mu_q = 1,$ Var$(q)= 7.062353 \times 10^{-4}$</p>
+<p>We also prescribe that the parameters ordered as $(\nu,\omega,\kappa_l,\kappa_u,q)$ have the following correlation matrix:</p>
+$$
+R= 
+\begin{pmatrix}
+1.00 &amp; 0.10 &amp; -0.05 &amp; 0.00 &amp; 0.00\\
+0.10 &amp; 1.00 &amp; -0.40 &amp; 0.30 &amp; 0.50 \\
+0.00 &amp; 0.30 &amp; 0.20 &amp; 1.00 &amp; -0.10 \\
+0.00 &amp; 0.50 &amp; 0.00 &amp; -0.10 &amp; 1.00 \\
+\end{pmatrix}
+$$<p>The QoI is total reaction rate: 
+$$
+Q= \int^{10}_{0} \kappa(x_ u)(x)dx
+$$</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Import Libraries</strong></p>
 
 </div>
 </div>
@@ -13169,10 +13262,15 @@ content is available <a href="git@github.com:ndcbe/cbe67701-uncertainty-quantifi
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## import all needed Python libraries here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.sparse</span> <span class="k">as</span> <span class="nn">sparse</span>
+<span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span> <span class="k">as</span> <span class="nn">linalg</span>
+<span class="kn">import</span> <span class="nn">scipy.integrate</span> <span class="k">as</span> <span class="nn">integrate</span>
+<span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 
     </div>
@@ -13187,8 +13285,351 @@ content is available <a href="git@github.com:ndcbe/cbe67701-uncertainty-quantifi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Numerical Method to Solve ADR Equation</strong></p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">Source</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">kappa</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function solves the diffusion equation with a generalized source. </span>
+<span class="sd">    </span>
+<span class="sd">    Inputs </span>
+<span class="sd">    Lx, Nx: Used to make the size of the dx term </span>
+<span class="sd">    Source: Source function</span>
+<span class="sd">    omega: diffusion coefficient </span>
+<span class="sd">    v: velocity field  </span>
+<span class="sd">    kappa: reaction coefficient equation </span>
+
+
+<span class="sd">    Outputs:</span>
+<span class="sd">    Solution: u(x) values </span>
+<span class="sd">    Q: Total reaction rate </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#Initialize A matrix that will be solved </span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">dia_matrix</span><span class="p">((</span><span class="n">Nx</span><span class="p">,</span><span class="n">Nx</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;complex&quot;</span><span class="p">)</span>
+    <span class="c1">#Initialize size of dx step </span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">Lx</span><span class="o">/</span><span class="n">Nx</span>
+    <span class="n">i2dx2</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    <span class="c1">#fill diagonal of A</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i2dx2</span><span class="o">*</span><span class="n">omega</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="o">/</span><span class="n">dx</span> <span class="o">+</span> <span class="n">kappa</span><span class="p">)</span>
+    <span class="c1">#fill off diagonals of A</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">(</span><span class="o">-</span><span class="n">i2dx2</span><span class="o">*</span><span class="n">omega</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">Nx</span><span class="p">]</span> <span class="o">+</span>
+              <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">Nx</span><span class="p">]))</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">Nx</span><span class="p">]</span><span class="o">/</span><span class="n">dx</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">(</span><span class="o">-</span><span class="n">i2dx2</span><span class="o">*</span><span class="n">omega</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">Nx</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="o">-</span>
+              <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">Nx</span><span class="o">-</span><span class="mi">1</span><span class="p">)])</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">:(</span><span class="n">Nx</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span><span class="o">/</span><span class="n">dx</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1">#solving equation A x = Source</span>
+    <span class="n">Solution</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">spsolve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">Source</span><span class="p">)</span>
+    <span class="c1">#Use trapezoidal integrater to find integral</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">Solution</span><span class="o">*</span><span class="n">kappa</span><span class="p">,</span><span class="n">dx</span><span class="o">=</span><span class="n">dx</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Solution</span><span class="p">,</span> <span class="n">Q</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Define Parameters</strong></p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Define desired spatial map and step</span>
+<span class="n">Lx</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Nx</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">Lx</span><span class="o">/</span><span class="n">Nx</span>
+
+<span class="c1">#Define functions that will be used by numerical solver </span>
+<span class="c1">#source function </span>
+<span class="n">Source_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span>  <span class="n">q</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">10</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#reaction constants </span>
+<span class="n">kappa_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">kappal</span><span class="p">,</span> <span class="n">kappah</span><span class="p">:</span> <span class="n">kappah</span> <span class="o">+</span> <span class="p">(</span><span class="n">kappal</span><span class="o">-</span><span class="n">kappah</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mf">7.5</span><span class="p">)</span>
+<span class="c1">#Initialize these to the correct size </span>
+<span class="n">v_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">:</span> <span class="n">v</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">omega_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">omega</span><span class="p">:</span> <span class="n">omega</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1">#Define array for plotting purposes </span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">Lx</span><span class="o">-</span><span class="n">dx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">Nx</span><span class="p">)</span>
+
+<span class="c1"># evaluate source and kappa</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">Source_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">kappa</span> <span class="o">=</span> <span class="n">kappa_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#nominal values and given variances </span>
+<span class="n">omega_nom</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">omega_var</span> <span class="o">=</span> <span class="mf">0.3195214</span>
+<span class="n">v_nom</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">v_var</span> <span class="o">=</span> <span class="mf">0.0723493</span>
+<span class="n">kappal_nom</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">kappal_var</span> <span class="o">=</span> <span class="mf">8.511570e-6</span>
+<span class="n">kappah_nom</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">kappah_var</span> <span class="o">=</span> <span class="mf">0.002778142</span>
+<span class="n">q_nom</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">q_var</span> <span class="o">=</span> <span class="mf">7.062353e-4</span>
+<span class="n">vs</span> <span class="o">=</span> <span class="n">v_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">v_nom</span><span class="p">)</span>
+<span class="c1"># print(vs)</span>
+
+<span class="c1">#Call Numerical Function above to solve equation </span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="p">),</span> <span class="n">vs</span><span class="p">,</span> <span class="n">kappa</span><span class="p">)</span>
+<span class="c1"># print(Q)</span>
+
+<span class="c1">#Plot solution </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">sol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;u(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The solution u(x) evaluated at mean value of uncertain parameters &#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/anaconda3/lib/python3.7/site-packages/scipy/sparse/linalg/dsolve/linsolve.py:133: SparseEfficiencyWarning: spsolve requires A be CSC or CSR matrix format
+  SparseEfficiencyWarning)
+/anaconda3/lib/python3.7/site-packages/numpy/core/numeric.py:538: ComplexWarning: Casting complex values to real discards the imaginary part
+  return array(a, dtype, copy=False, order=order)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Sensitivity Analysis</strong></p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sensitivity using Forward Difference Derivative Approximation:</p>
+$$
+\frac{\partial Q}{\partial x_i} \bigg|_{\overline{x}} \approx \frac{Q(\overline{x} + \delta_i\hat{e_i}) - Q(\overline{x})}{\delta_i}
+$$<p>Scaled Sensitivity Coefficient:</p>
+$$
+\overline{x_i}\frac{\delta Q}{\delta x_i}\bigg|_\overline{x}
+$$<p>Sensitivity Index:
+$$
+\sigma_i\frac{\delta Q}{\delta x_i}\bigg|_\overline{x}
+$$</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#v sensitivity</span>
+<span class="c1">#finite difference step amount </span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-6</span>
+<span class="n">vs_pert</span> <span class="o">=</span> <span class="n">v_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">v_nom</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">delta</span><span class="p">))</span>
+<span class="c1">#Calculate second point for finite difference</span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q_new</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="p">),</span> <span class="n">vs_pert</span><span class="p">,</span> <span class="n">kappa</span><span class="p">)</span>
+<span class="c1">#finite difference Sensitivity Calculation </span>
+<span class="n">sens_v</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_new</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">v_nom</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>
+<span class="c1">#Scaled Sensitivity </span>
+<span class="n">scaled_v</span> <span class="o">=</span> <span class="n">sens_v</span><span class="o">*</span><span class="n">v_nom</span>
+<span class="c1">#Sensitivity Index </span>
+<span class="n">index_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v_var</span><span class="p">)</span><span class="o">*</span><span class="n">sens_v</span>
+<span class="c1">#Print Commands </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;######################### Sensitivity Analysis #################&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v sensitivity: &quot;</span><span class="p">,</span> <span class="n">sens_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v scaled sensitivity: &quot;</span><span class="p">,</span> <span class="n">scaled_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v Sensitivity index: &quot;</span><span class="p">,</span> <span class="n">index_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#omega sensitivity</span>
+<span class="c1">#Calculate second point for finite difference </span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q_new</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">delta</span><span class="p">)),</span> <span class="n">vs</span><span class="p">,</span> <span class="n">kappa</span><span class="p">)</span>
+<span class="c1">#Sensitivity calculation using finite difference </span>
+<span class="n">sens_omega</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_new</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">omega_nom</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>
+<span class="c1">#Scaled sensitivity Calc</span>
+<span class="n">scaled_v</span> <span class="o">=</span> <span class="n">sens_omega</span><span class="o">*</span><span class="n">omega_nom</span>
+<span class="c1">#Sensitivity Index Calc</span>
+<span class="n">index_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">omega_var</span><span class="p">)</span><span class="o">*</span><span class="n">sens_omega</span>
+<span class="c1">#Print Commands </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;omega sensitivity: &quot;</span><span class="p">,</span> <span class="n">sens_omega</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;omega scaled sensitivity: &quot;</span><span class="p">,</span> <span class="n">scaled_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;omega sensitivity index: &quot;</span><span class="p">,</span> <span class="n">index_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#kappal sensitivity</span>
+<span class="c1">#Calculate second point value for finite difference </span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q_new</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="p">),</span> <span class="n">vs</span><span class="p">,</span> <span class="n">kappa_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">kappal_nom</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">delta</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1">#Sensitivity Calculation using finite difference </span>
+<span class="n">sens_kappal</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_new</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">kappal_nom</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>
+<span class="c1">#Scaled Sensitivity Calc </span>
+<span class="n">scaled_v</span> <span class="o">=</span> <span class="n">sens_kappal</span><span class="o">*</span><span class="n">kappal_nom</span>
+<span class="c1">#Sensitivity Index Calc</span>
+<span class="n">index_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">kappal_var</span><span class="p">)</span><span class="o">*</span><span class="n">sens_kappal</span>
+<span class="c1">#Print Commands </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_l sensitivity: &quot;</span><span class="p">,</span> <span class="n">sens_kappal</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_l scaled sensitivity: &quot;</span><span class="p">,</span> <span class="n">scaled_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_l sensitivity index: &quot;</span><span class="p">,</span> <span class="n">index_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#kappah sensitivity</span>
+<span class="c1">#Calculate second point value for finite difference </span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q_new</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="p">),</span> <span class="n">vs</span><span class="p">,</span> <span class="n">kappa_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">kappal_nom</span><span class="p">,</span> <span class="n">kappah_nom</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">delta</span><span class="p">)))</span>
+<span class="c1">#Sensitivity Calculation using finite difference </span>
+<span class="n">sens_kappah</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_new</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">kappah_nom</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>
+<span class="c1">#Scaled Sensitivity Calc</span>
+<span class="n">scaled_v</span> <span class="o">=</span> <span class="n">sens_kappah</span><span class="o">*</span><span class="n">kappah_nom</span>
+<span class="c1">#Sensitivity Index Calc</span>
+<span class="n">index_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">kappah_var</span><span class="p">)</span><span class="o">*</span><span class="n">sens_kappah</span>
+<span class="c1">#Print Commands </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_h sensitivity: &quot;</span><span class="p">,</span> <span class="n">sens_kappah</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_h scaled sensitivity: &quot;</span><span class="p">,</span> <span class="n">scaled_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kappa_h sensitivity index: &quot;</span><span class="p">,</span> <span class="n">index_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#q sensitivity</span>
+<span class="c1">#Calculate second point value for finite difference </span>
+<span class="n">sol</span><span class="p">,</span><span class="n">Q_new</span> <span class="o">=</span> <span class="n">ADRSource</span><span class="p">(</span><span class="n">Lx</span><span class="p">,</span> <span class="n">Nx</span><span class="p">,</span> <span class="n">Source_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">q_nom</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">delta</span><span class="p">)),</span> <span class="n">omega_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">omega_nom</span><span class="p">),</span> <span class="n">vs</span><span class="p">,</span><span class="n">kappa_func</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">kappal_nom</span><span class="p">,</span> <span class="n">kappah_nom</span><span class="p">))</span>
+<span class="n">sens_q</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_new</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">q_nom</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>
+<span class="c1">#Scaled Sensitivity Calc</span>
+<span class="n">scaled_v</span> <span class="o">=</span> <span class="n">sens_q</span><span class="o">*</span><span class="n">q_nom</span>
+<span class="c1">#Sensitivity Index Calc</span>
+<span class="n">index_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">q_var</span><span class="p">)</span><span class="o">*</span><span class="n">sens_q</span>
+<span class="c1">#print commands</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;q sensitivity: &quot;</span><span class="p">,</span> <span class="n">sens_q</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;q scaled sensitivity: &quot;</span><span class="p">,</span> <span class="n">scaled_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;q sensitivity index: &quot;</span><span class="p">,</span> <span class="n">index_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>######################### Sensitivity Analysis #################
+v sensitivity:  (-1.7406387549101512+0j)
+v scaled sensitivity:  (-17.406387549101513+0j)
+v Sensitivity index:  (-0.46819396950072134+0j)
+
+
+omega sensitivity:  (-0.970203846506479+0j)
+omega scaled sensitivity:  (-19.40407693012958+0j)
+omega sensitivity index:  (-0.5484195995587706+0j)
+
+
+Kappa_l sensitivity:  (12.867971008745371+0j)
+Kappa_l scaled sensitivity:  (1.2867971008745371+0j)
+Kappa_l sensitivity index:  (0.0375417844104318+0j)
+
+
+Kappa_h sensitivity:  (17.761271102756382+0j)
+Kappa_h scaled sensitivity:  (35.522542205512764+0j)
+Kappa_h sensitivity index:  (0.9361625491891298+0j)
+
+
+q sensitivity:  (52.39025306025269+0j)
+q scaled sensitivity:  (52.39025306025269+0j)
+q sensitivity index:  (1.3922755832423062+0j)
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html">4.1 Meaningful Title Goes Here</a> | <a href="toc.html">Contents</a> | <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html">5.0 Regression Approximations to Estimate Sensitivities</a><p><a href="https://colab.research.google.com/github/ndcbe/cbe67701-uncertainty-quantification/blob/master/docs/04.02-Contributed-Example.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Contributed-Example.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
+&lt; <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html">4.1 Meaningful Title Goes Here</a> | <a href="toc.html">Contents</a> | <a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html">5.0 Regression Approximations to Estimate Sensitivities</a><p><a href="https://colab.research.google.com/github/ndcbe/cbe67701-uncertainty-quantification/blob/master/docs/04.02-Simple-ADR-Example.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Simple-ADR-Example.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
 
 </div>
 </div>
