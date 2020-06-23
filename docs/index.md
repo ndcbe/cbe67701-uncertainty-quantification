@@ -27,7 +27,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [3.2 Principal Component Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.02-Contributed-Example.html)
 
 ### [Chapter 4.0 Local Sensitivity Analysis Based on Derivative Approximations](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.00-Local-Sensitivity-Analysis-Based-on-Derivative-Approximations.html)
-- [4.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html)
+- [4.1 Local sensitivity analysis and difference approximation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Local-sensitivity-analysis.html)
 - [4.2 Advection-Diffusion-Reaction (ADR) Example](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Simple-ADR-Example.html)
 
 ### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
