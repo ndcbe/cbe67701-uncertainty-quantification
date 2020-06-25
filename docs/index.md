@@ -31,7 +31,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [4.2 Advection-Diffusion-Reaction (ADR) Example](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Simple-ADR-Example.html)
 
 ### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
-- [5.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
+- [5.1 Chapter 5 - Ridge Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
 - [5.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.02-Contributed-Example.html)
 - [5.3 Elastic Net Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.03-Contributed-Example.html)
 
