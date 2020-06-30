@@ -27,16 +27,16 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [3.2 Principal Component Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/03.02-Contributed-Example.html)
 
 ### [Chapter 4.0 Local Sensitivity Analysis Based on Derivative Approximations](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.00-Local-Sensitivity-Analysis-Based-on-Derivative-Approximations.html)
-- [4.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Contributed-Example.html)
+- [4.1 Local sensitivity analysis and difference approximation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.01-Local-sensitivity-analysis.html)
 - [4.2 Advection-Diffusion-Reaction (ADR) Example](https://ndcbe.github.io/cbe67701-uncertainty-quantification/04.02-Simple-ADR-Example.html)
 
 ### [Chapter 5.0 Regression Approximations to Estimate Sensitivities](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.00-Regression-Approximations-to-Estimate-Sensitivities.html)
-- [5.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
-- [5.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.02-Contributed-Example.html)
-- [5.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.03-Contributed-Example.html)
+- [5.1 Ridge Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.01-Contributed-Example.html)
+- [5.2 Lasso Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.02-Contributed-Example.html)
+- [5.3 Elastic Net Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.03-Contributed-Example.html)
 
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
-- [6.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
+- [6.1 **Nonlinear Diffusion-Reaction Equation**](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
 - [6.2 A Simple Example of Adjoint Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
