@@ -41,7 +41,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
 - [7.1 Latin Hypercube and Quasi-Monte Carlo Sampling](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html)
-- [7.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.02-Contributed-Example.html)
+- [7.2 Latin Hypercube Sampling](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.02-Latin-Hypercube-sampling.html)
 - [7.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.03-Contributed-Example.html)
 
 ### [Chapter 8.0 Reliability Methods for Estimating the Probability of Failure](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.00-Reliability-Methods-for-Estimating-the-Probability-of-Failure.html)
