@@ -1,5 +1,5 @@
 [nbpages]
-github_repo_url = https://github.com/ndcbe/cbe67701-uncertainty-quantification.git
+github_repo_url = git@github.com:ndcbe/cbe67701-uncertainty-quantification.git
 github_user_name = ndcbe
 github_repo_name = cbe67701-uncertainty-quantification
 github_pages_url = https://ndcbe.github.io/cbe67701-uncertainty-quantification
