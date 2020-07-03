@@ -13017,6 +13017,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13187,7 +13226,43 @@ div#notebook {
 </ul>
 </li>
 </ul>
-<h3 id="6.2-A-Simple-Example-of-Adjoint-Sensitivity-Analysis"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html">6.2 A Simple Example of Adjoint Sensitivity Analysis</a><a class="anchor-link" href="#6.2-A-Simple-Example-of-Adjoint-Sensitivity-Analysis">&#182;</a></h3><h2 id="Chapter-7.0-Sampling-Based-Uncertainty-Quantification:-Monte-Carlo-and-Beyond"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html">Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond</a><a class="anchor-link" href="#Chapter-7.0-Sampling-Based-Uncertainty-Quantification:-Monte-Carlo-and-Beyond">&#182;</a></h2><h3 id="7.1-Latin-Hypercube-and-Quasi-Monte-Carlo-Sampling"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html">7.1 Latin Hypercube and Quasi-Monte Carlo Sampling</a><a class="anchor-link" href="#7.1-Latin-Hypercube-and-Quasi-Monte-Carlo-Sampling">&#182;</a></h3><ul>
+<h3 id="6.2-A-Simple-Example-of-Adjoint-Sensitivity-Analysis"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html">6.2 A Simple Example of Adjoint Sensitivity Analysis</a><a class="anchor-link" href="#6.2-A-Simple-Example-of-Adjoint-Sensitivity-Analysis">&#182;</a></h3><h3 id="6.3-Sensitivity-Analysis-with-Adjoint-Operators"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html">6.3 Sensitivity Analysis with Adjoint Operators</a><a class="anchor-link" href="#6.3-Sensitivity-Analysis-with-Adjoint-Operators">&#182;</a></h3><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.1-Review-of-inner-products">6.3.1 Review of inner products</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.2-Sensitivity-Analysis-of-Linear-equations">6.3.2 Sensitivity Analysis of Linear equations</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.3-Case-1.-Perturbations-in-the-RHS">6.3.3 Case 1. Perturbations in the RHS</a><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.3.1-Example:-Multi-product-plant">6.3.3.1 Example: Multi-product plant</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.3.2-Solution">6.3.3.2 Solution</a></li>
+</ul>
+</li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.4-Case-2.-Sensitivity-to-changes-in-equation-coefficients">6.3.4 Case 2. Sensitivity to changes in equation coefficients</a><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.4.1-Example">6.3.4.1 Example</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.4.2-Solution">6.3.4.2 Solution</a></li>
+</ul>
+</li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.5-Case-3.-Sensitivity-to-changes-in-quantity-of-interest">6.3.5 Case 3. Sensitivity to changes in quantity of interest</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.6-Adjoint-sensitivity-of-systems-of-first-order-linear-systems">6.3.6 Adjoint sensitivity of systems of first-order linear systems</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7-Application:-Pharmacokinetics-of-5-Fluorouracil-(5-FU">6.3.7 Application: Pharmacokinetics of 5-Fluorouracil (5-FU) in the treatment of gastrointestinal cancer</a>-in-the-treatment-of-gastrointestinal-cancer)<ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7.1-Linear-pharmacokinetics">6.3.7.1 Linear pharmacokinetics</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7.2-Finding-the-adjoint-operator">6.3.7.2 Finding the adjoint operator</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7.3-Example:-One-compartment-model">6.3.7.3 Example: One compartment model</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7.4-Sensitivity-to-changes-in-elimination-rate-$k$">6.3.7.4 Sensitivity to changes in elimination rate $k$</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.7.5-Sensitivity-to-changes-in-compartment-volume-$V$">6.3.7.5 Sensitivity to changes in compartment volume $V$</a></li>
+</ul>
+</li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.8-Systems-of-first-order-nonlinear-differential-equations">6.3.8 Systems of first-order nonlinear differential equations</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.9-Application-to-an-over-damped-oscillator">6.3.9 Application to an over-damped oscillator</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.10-Systems-of-first-order-differential-equations">6.3.10 Systems of first-order differential equations</a><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.10.1-Application:-Preditor-prey-dynamics-of-the-Hare/Lynx-system">6.3.10.1 Application: Preditor-prey dynamics of the Hare/Lynx system</a></li>
+</ul>
+</li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html#6.3.11-Application-to-an-exothermic-stirred-tank-reactor">6.3.11 Application to an exothermic stirred tank reactor</a></li>
+<li>Markdown Links<ul>
+<li><a href="https://link-springer-com.proxy.library.nd.edu/book/10.1007%2F978-3-319-99525-0">McClarren (2018)</a></li>
+<li><a href="http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/tutorials/tut4.pdf">http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/tutorials/tut4.pdf</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter-7.0-Sampling-Based-Uncertainty-Quantification:-Monte-Carlo-and-Beyond"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html">Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond</a><a class="anchor-link" href="#Chapter-7.0-Sampling-Based-Uncertainty-Quantification:-Monte-Carlo-and-Beyond">&#182;</a></h2><h3 id="7.1-Latin-Hypercube-and-Quasi-Monte-Carlo-Sampling"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html">7.1 Latin Hypercube and Quasi-Monte Carlo Sampling</a><a class="anchor-link" href="#7.1-Latin-Hypercube-and-Quasi-Monte-Carlo-Sampling">&#182;</a></h3><ul>
 <li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html#7.1.1-Latin-hypercube-sampling">7.1.1 Latin hypercube sampling</a></li>
 <li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html#7.1.2-Quasi-MC:-Halton’s-low-discrepency-sequences">7.1.2 Quasi MC: Halton’s low discrepency sequences</a></li>
 <li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html#7.1.3-Comparison-(1-dimensional">7.1.3 Comparison (1 dimensional)</a>)</li>

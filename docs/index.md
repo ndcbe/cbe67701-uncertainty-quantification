@@ -38,6 +38,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
 - [6.1 **Nonlinear Diffusion-Reaction Equation**](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
 - [6.2 A Simple Example of Adjoint Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
+- [6.3 Sensitivity Analysis with Adjoint Operators](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html)
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
 - [7.1 Latin Hypercube and Quasi-Monte Carlo Sampling](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html)
