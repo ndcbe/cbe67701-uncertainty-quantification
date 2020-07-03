@@ -36,7 +36,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [5.3 Elastic Net Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/05.03-Contributed-Example.html)
 
 ### [Chapter 6.0 Adjoint-Based Local Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.00-Adjoint-Based-Local-Sensitivity-Analysis.html)
-- [6.1 **Nonlinear Diffusion-Reaction Equation**](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
+- [6.1 Nonlinear Diffusion-Reaction Equation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
 - [6.2 A Simple Example of Adjoint Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
 - [6.3 Sensitivity Analysis with Adjoint Operators](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html)
 
