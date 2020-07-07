@@ -47,7 +47,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 
 ### [Chapter 8.0 Reliability Methods for Estimating the Probability of Failure](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.00-Reliability-Methods-for-Estimating-the-Probability-of-Failure.html)
 - [8.1 First-Order Second-Moment (FOSM) Method Example](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.01-First-Order-Second-Moment-Method.html)
-- [8.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.02-Contributed-Example.html)
+- [8.2 Advanced First-Order Seccond-Momemt Methods (AFSOM)](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.02-Advanced-First-Order-Second-Moment-Method.html)
 - [8.3 Advanced First-Order Second-Moment Methods](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.03-Contributed-Example.html)
 
 ### [Chapter 9.0 Stochastic Projection and Collocation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.00-Stochastic-Projection-and-Collocation.html)
