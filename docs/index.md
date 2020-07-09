@@ -51,8 +51,8 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [8.3 Advanced First-Order Second-Moment Methods](https://ndcbe.github.io/cbe67701-uncertainty-quantification/08.03-Contributed-Example.html)
 
 ### [Chapter 9.0 Stochastic Projection and Collocation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.00-Stochastic-Projection-and-Collocation.html)
-- [9.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.01-Contributed-Example.html)
-- [9.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.02-Contributed-Example.html)
+- [9.1 Hermite Expansion for Normally Distributed Parameters](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.01-Contributed-Example.html)
+- [9.2 Uniform Random Variables: Legendre Polynomials](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.02-Uniform-Random-Variables-Legendre-Polynomials-Example.html)
 
 ### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
 - [10.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.01-Contributed-Example.html)
