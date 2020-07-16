@@ -11,9 +11,6 @@ method from each chapter.
 For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Computational Science*](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph005207583) by Prof. Ryan McClarren.
 
 ### [Table of Contents](https://ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
-### [Data Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/data_index.html)
-### [Figure Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/figure_index.html)
-### [Python Module Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/python_index.html)
 
 ### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
 - [1.1 Our First Notebook](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.01-Contributed-Example.html)
