@@ -13276,7 +13276,7 @@ $$A = \pi r^2$$<p>In a markdown cell, starting a line with...</p>
 <span class="c1"># Check if Pyomo is available. If not, install it.</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">&quot;pyomo&quot;</span><span class="p">):</span>
     <span class="c1"># Tip: &quot;!pip&quot; means run the &#39;pip&#39; command outside the notebook.ß</span>
-    <span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">pyomo</span>
+    <span class="o">!</span>pip install -q pyomo
     <span class="k">assert</span><span class="p">(</span><span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">&quot;pyomo&quot;</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pyomo found! No need to install.&quot;</span><span class="p">)</span>
@@ -13285,12 +13285,12 @@ $$A = \pi r^2$$<p>In a markdown cell, starting a line with...</p>
 <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">&quot;ipopt&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;ipopt&quot;</span><span class="p">)):</span>
     <span class="c1"># Check if we are running on Google Colab</span>
     <span class="k">if</span> <span class="s2">&quot;google.colab&quot;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-        <span class="err">!</span><span class="n">wget</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">q</span> <span class="s2">&quot;https://ampl.com/dl/open/ipopt/ipopt-linux64.zip&quot;</span>
-        <span class="err">!</span><span class="n">unzip</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">q</span> <span class="n">ipopt</span><span class="o">-</span><span class="n">linux64</span>
+        <span class="o">!</span>wget -N -q <span class="s2">&quot;https://ampl.com/dl/open/ipopt/ipopt-linux64.zip&quot;</span>
+        <span class="o">!</span>unzip -o -q ipopt-linux64
     <span class="c1"># Otherwise, try conda</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="err">!</span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ipopt</span> 
+            <span class="o">!</span>conda install -c conda-forge ipopt 
         <span class="k">except</span><span class="p">:</span>
             <span class="k">pass</span>
 <span class="k">else</span><span class="p">:</span>

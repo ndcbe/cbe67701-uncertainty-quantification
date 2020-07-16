@@ -11,6 +11,9 @@ method from each chapter.
 For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Computational Science*](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph005207583) by Prof. Ryan McClarren.
 
 ### [Table of Contents](https://ndcbe.github.io/cbe67701-uncertainty-quantification/toc.html)
+### [Data Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/data_index.html)
+### [Figure Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/figure_index.html)
+### [Python Module Index](https://ndcbe.github.io/cbe67701-uncertainty-quantification/python_index.html)
 
 ### [Chapter 1.0 Introduction to Uncertainty Quantification and Predictive Sciences](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.00-Introduction-to-Uncertainty-Quantification-and-Predictive-Sciences.html)
 - [1.1 Our First Notebook](https://ndcbe.github.io/cbe67701-uncertainty-quantification/01.01-Contributed-Example.html)
@@ -52,8 +55,8 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [9.2 Uniform Random Variables: Legendre Polynomials](https://ndcbe.github.io/cbe67701-uncertainty-quantification/09.02-Uniform-Random-Variables-Legendre-Polynomials-Example.html)
 
 ### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
-- [10.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.01-Contributed-Example.html)
-- [10.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Contributed-Example.html)
+- [10.1 Using GPflow package for Gaussian Process Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.01-Contributed-Example.html)
+- [10.2 A simple example of Bayesian quadrature](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Bayesian-quadrature.html)
 
 ### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
 - [11.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Contributed-Example.html)
