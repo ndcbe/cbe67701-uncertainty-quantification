@@ -39,6 +39,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [6.1 Nonlinear Diffusion-Reaction Equation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.01-Contributed-Example.html)
 - [6.2 A Simple Example of Adjoint Sensitivity Analysis](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.02-Contributed-Example.html)
 - [6.3 Sensitivity Analysis with Adjoint Operators](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.03-Sensitivity-Analysis-with-Adjoint-Operators.html)
+- [6.4 Adjoint Sensitivity Notes on Numerical Computation](https://ndcbe.github.io/cbe67701-uncertainty-quantification/06.04-Adjoint-Sensitivity-Notes-on-Numerical-Computation.html)
 
 ### [Chapter 7.0 Sampling-Based Uncertainty Quantification: Monte Carlo and Beyond](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.00-Sampling-Based-Uncertainty-Quantification.html)
 - [7.1 Latin Hypercube and Quasi-Monte Carlo Sampling](https://ndcbe.github.io/cbe67701-uncertainty-quantification/07.01-Sampling-Based-Uncertainty-Quantification.html)
@@ -59,9 +60,9 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [10.2 A simple example of Bayesian quadrature](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Bayesian-quadrature.html)
 
 ### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
-- [11.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Contributed-Example.html)
+- [11.1 Gibbs Sampling to Approximate Bayes' Integral](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Gibbs-Sampling.html)
 - [11.2 Markov Chain Monte Carlo Examples](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.02-Contributed-Example.html)
-- [11.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.03-Contributed-Example.html)
+- [11.3 The Kennedy-O’Hagan Predictive Model](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.03-Contributed-Example.html)
 
 ### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
 - [12.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Contributed-Example.html)
