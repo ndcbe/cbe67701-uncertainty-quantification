@@ -60,7 +60,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 
 ### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
 - [11.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Contributed-Example.html)
-- [11.2 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.02-Contributed-Example.html)
+- [11.2 Markov Chain Monte Carlo Examples](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.02-Contributed-Example.html)
 - [11.3 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.03-Contributed-Example.html)
 
 ### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)

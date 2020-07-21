@@ -1,3 +1,4 @@
+
 <!-- jinja2 template extends `full` to include cell tags in the html rendering of notebooks -->
 <!DOCTYPE html>
 <html>
@@ -13018,6 +13019,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13199,18 +13239,18 @@ $$</li>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## import all needed Python libraries here</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="k">import</span> <span class="n">Axes3D</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
-<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">norm</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="n">quad</span>
 
 <span class="c1"># import sys</span>
 <span class="c1"># !{sys.executable} -m pip install --user emukit</span>
 <span class="c1"># !{sys.executable} -m pip install --user pyDOE</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.gaussian_process</span> <span class="kn">import</span> <span class="n">GaussianProcessRegressor</span>
-<span class="kn">from</span> <span class="nn">sklearn.gaussian_process.kernels</span> <span class="kn">import</span> <span class="n">RBF</span><span class="p">,</span> <span class="n">ConstantKernel</span> <span class="k">as</span> <span class="n">C</span>
+<span class="kn">from</span> <span class="nn">sklearn.gaussian_process</span> <span class="k">import</span> <span class="n">GaussianProcessRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.gaussian_process.kernels</span> <span class="k">import</span> <span class="n">RBF</span><span class="p">,</span> <span class="n">ConstantKernel</span> <span class="k">as</span> <span class="n">C</span>
 
 
 <span class="c1"># Figure config</span>
@@ -13379,8 +13419,8 @@ over $[-3, 3]$.</p>
 <span class="n">gpy_model</span> <span class="o">=</span> <span class="n">GPy</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">GPRegression</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_init</span><span class="p">,</span> <span class="n">Y</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="n">X_init</span><span class="p">),</span> <span class="n">kernel</span><span class="o">=</span><span class="n">GPy</span><span class="o">.</span><span class="n">kern</span><span class="o">.</span><span class="n">RBF</span><span class="p">(</span>
                         <span class="n">input_dim</span><span class="o">=</span><span class="n">X_init</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lengthscale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">variance</span><span class="o">=</span><span class="mf">1.0</span><span class="p">))</span>
 
-<span class="kn">from</span> <span class="nn">emukit.model_wrappers.gpy_quadrature_wrappers</span> <span class="kn">import</span> <span class="n">BaseGaussianProcessGPy</span><span class="p">,</span> <span class="n">RBFGPy</span>
-<span class="kn">from</span> <span class="nn">emukit.quadrature.kernels</span> <span class="kn">import</span> <span class="n">QuadratureRBFLebesgueMeasure</span>
+<span class="kn">from</span> <span class="nn">emukit.model_wrappers.gpy_quadrature_wrappers</span> <span class="k">import</span> <span class="n">BaseGaussianProcessGPy</span><span class="p">,</span> <span class="n">RBFGPy</span>
+<span class="kn">from</span> <span class="nn">emukit.quadrature.kernels</span> <span class="k">import</span> <span class="n">QuadratureRBFLebesgueMeasure</span>
 
 <span class="n">emukit_rbf</span> <span class="o">=</span> <span class="n">RBFGPy</span><span class="p">(</span><span class="n">gpy_model</span><span class="o">.</span><span class="n">kern</span><span class="p">)</span>
 <span class="n">emukit_qrbf</span> <span class="o">=</span> <span class="n">QuadratureRBFLebesgueMeasure</span><span class="p">(</span><span class="n">emukit_rbf</span><span class="p">,</span> <span class="n">integral_bounds</span><span class="o">=</span><span class="p">[[</span><span class="n">lb</span><span class="p">,</span> <span class="n">ub</span><span class="p">]])</span>
@@ -13412,7 +13452,7 @@ over $[-3, 3]$.</p>
 <div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">emukit.quadrature.methods</span> <span class="kn">import</span> <span class="n">VanillaBayesianQuadrature</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">emukit.quadrature.methods</span> <span class="k">import</span> <span class="n">VanillaBayesianQuadrature</span>
 
 <span class="n">emukit_method</span> <span class="o">=</span> <span class="n">VanillaBayesianQuadrature</span><span class="p">(</span><span class="n">base_gp</span><span class="o">=</span><span class="n">emukit_model</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="n">X_init</span><span class="p">,</span> <span class="n">Y</span><span class="o">=</span><span class="n">Y_init</span><span class="p">)</span>
 
@@ -13537,14 +13577,14 @@ The ground truth rounded to 2 digits for comparison is:  0.54 .
 <div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">emukit.quadrature.acquisitions</span> <span class="kn">import</span> <span class="n">IntegralVarianceReduction</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">emukit.quadrature.acquisitions</span> <span class="k">import</span> <span class="n">IntegralVarianceReduction</span>
 
 <span class="n">ivr_acquisition</span> <span class="o">=</span> <span class="n">IntegralVarianceReduction</span><span class="p">(</span><span class="n">emukit_method</span><span class="p">)</span>
 
 <span class="n">ivr_plot</span> <span class="o">=</span> <span class="n">ivr_acquisition</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_plot</span><span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">emukit.core.optimization</span> <span class="kn">import</span> <span class="n">GradientAcquisitionOptimizer</span>
-<span class="kn">from</span> <span class="nn">emukit.core.parameter_space</span> <span class="kn">import</span> <span class="n">ParameterSpace</span>
+<span class="kn">from</span> <span class="nn">emukit.core.optimization</span> <span class="k">import</span> <span class="n">GradientAcquisitionOptimizer</span>
+<span class="kn">from</span> <span class="nn">emukit.core.parameter_space</span> <span class="k">import</span> <span class="n">ParameterSpace</span>
 
 <span class="n">space</span> <span class="o">=</span> <span class="n">ParameterSpace</span><span class="p">(</span><span class="n">emukit_method</span><span class="o">.</span><span class="n">reasonable_box_bounds</span><span class="o">.</span><span class="n">convert_to_list_of_continuous_parameters</span><span class="p">())</span>
 <span class="n">optimizer</span> <span class="o">=</span> <span class="n">GradientAcquisitionOptimizer</span><span class="p">(</span><span class="n">space</span><span class="p">)</span>
