@@ -65,7 +65,6 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 - [11.3 The Kennedy-O’Hagan Predictive Model](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.03-Contributed-Example.html)
 
 ### [Chapter 12.0 Epistemic Uncertainties: Dealing with a Lack of Knowledge](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.00-Epistemic-Uncertainties.html)
-- [12.1 Meaningful Title Goes Here](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Contributed-Example.html)
 - [12.1 Predictions under epistemic uncertainty with p-boxes](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.01-Epistemic-uncertainty-with-p-boxes.html)
 - [12.2 Epistemic Uncertainty Quantification](https://ndcbe.github.io/cbe67701-uncertainty-quantification/12.02-Contributed-Example.html)
 
