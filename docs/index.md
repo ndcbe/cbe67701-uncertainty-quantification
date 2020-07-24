@@ -58,6 +58,7 @@ For Summer 2020, we are studying [*Uncertainty Quantification and Predictive Com
 ### [Chapter 10.0 Gaussian Process Emulators and Surrogate Models](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.00-Gaussian-Process-Emulators-and-Surrogate-Models.html)
 - [10.1 Using GPflow package for Gaussian Process Regression](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.01-Contributed-Example.html)
 - [10.2 A simple example of Bayesian quadrature](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Bayesian-quadrature.html)
+- [10.3 **Using scikit-learn for Gaussian Process Regression**](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html)
 
 ### [Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html)
 - [11.1 Gibbs Sampling to Approximate Bayes' Integral](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Gibbs-Sampling.html)

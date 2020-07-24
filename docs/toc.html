@@ -13426,8 +13426,24 @@ div#notebook {
 - [10.2.4 Result](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Bayesian-quadrature.html#10.2.4-Result)
     - [10.2.4.1 Find the next quadrature point by minimizing the posterior variance](https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.02-Bayesian-quadrature.html#10.2.4.1-Find-the-next-quadrature-point-by-minimizing-the-posterior-variance)
 
-
 </code></pre>
+<h3 id="10.3-Using-scikit-learn-for-Gaussian-Process-Regression"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html">10.3 <strong>Using scikit-learn for Gaussian Process Regression</strong></a><a class="anchor-link" href="#10.3-Using-scikit-learn-for-Gaussian-Process-Regression">&#182;</a></h3><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.1-**Objectives**">10.3.1 <strong>Objectives</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.2-**Mathematical-overview**">10.3.2 <strong>Mathematical overview</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.3-**Import-libraries**">10.3.3 <strong>Import libraries</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.4-**Generate-training-data**">10.3.4 <strong>Generate training data</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.5-**Visualizing-the-training-data**">10.3.5 <strong>Visualizing the training data</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.6-**Define-test-data**">10.3.6 <strong>Define test data</strong></a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7-**scikit-learn-example**">10.3.7 <strong>scikit-learn example</strong></a><ul>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.1-Step-1:-Loading-libraries-for-defining-kernel-and-gaussian-process-regression-model">10.3.7.1 Step 1: Loading libraries for defining kernel and gaussian process regression model</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.2-Step-2:-Reshaping-the-data-according-to-the-dimensionality-of-the-problem">10.3.7.2 Step 2: Reshaping the data according to the dimensionality of the problem</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.3-Step-3:-Defining-the-kernel-and-GPR-model">10.3.7.3 Step 3: Defining the kernel and GPR model</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.4-Step-4:-Calling-in-the-defined-GP-model-for-making-predictions-on-the-test-dataset">10.3.7.4 Step 4: Calling in the defined GP model for making predictions on the test dataset</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.5-Step-5:-Estimating-credible-intervals">10.3.7.5 Step 5: Estimating credible intervals</a></li>
+<li><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/10.03-Gaussian-Process-Regression.html#10.3.7.6-Step-6:-Visualizating-results">10.3.7.6 Step 6: Visualizating results</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="Chapter-11.0-Predictive-Models-Informed-by-Simulation,-Measurement,-and-Surrogates"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.00-Predictive-Models-Informed-by-Simulation-Measurement-and-Surrogates.html">Chapter 11.0 Predictive Models Informed by Simulation, Measurement, and Surrogates</a><a class="anchor-link" href="#Chapter-11.0-Predictive-Models-Informed-by-Simulation,-Measurement,-and-Surrogates">&#182;</a></h2><h3 id="11.1-Gibbs-Sampling-to-Approximate-Bayes'-Integral"><a href="https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Gibbs-Sampling.html">11.1 Gibbs Sampling to Approximate Bayes' Integral</a><a class="anchor-link" href="#11.1-Gibbs-Sampling-to-Approximate-Bayes'-Integral">&#182;</a></h3>
 <pre><code>- [11.1.1 Example: Multivariate distribution](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Gibbs-Sampling.html#11.1.1-Example:-Multivariate-distribution)
 - [11.1.2 When will the method break?](https://ndcbe.github.io/cbe67701-uncertainty-quantification/11.01-Gibbs-Sampling.html#11.1.2-When-will-the-method-break?)
